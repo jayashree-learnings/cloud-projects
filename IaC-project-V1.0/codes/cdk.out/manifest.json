@@ -1,0 +1,466 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "singleStack-test.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "singleStack-test.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "singleStack-test": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "singleStack-test.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4cc7ac57e3a4bffbb8914f8e42dbbfb5372f245cd06506abf7d16722559f140c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "singleStack-test.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "singleStack-test.assets"
+      ],
+      "metadata": {
+        "/singleStack-test/WebServerVpcA/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcA0C9DFE71"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet1SubnetC50EEEC8"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet1RouteTable273F23E7"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet1RouteTableAssociationD94FDF94"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet1DefaultRouteA52A7221"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet2SubnetDE4350BF"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet2RouteTableA448F9FC"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet2RouteTableAssociation93936CE9"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcApublicSubnet2DefaultRoute656ACD92"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcAIGW4DC1818D"
+          }
+        ],
+        "/singleStack-test/WebServerVpcA/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerVpcAVPCGW6EA4A382"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBECDD3418"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet1SubnetD4B59ECB"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet1RouteTable5F60EE9C"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet1RouteTableAssociationB9A9EE57"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet1DefaultRouteBFB77452"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet2Subnet2ECB0AB3"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet2RouteTable552E22BD"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet2RouteTableAssociation05A41CE5"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBpublicSubnet2DefaultRouteCA04D799"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBIGW3AD4C0DD"
+          }
+        ],
+        "/singleStack-test/AdminServerVpcB/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerVpcBVPCGWC0E90D39"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAcl8238AD6E"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/DefaultAssociationsingleStacktestWebServerVpcApublicSubnet1440C3E07/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclDefaultAssociationsingleStacktestWebServerVpcApublicSubnet1440C3E074BCE4BFD"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/DefaultAssociationsingleStacktestWebServerVpcApublicSubnet20CD95BAD/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclDefaultAssociationsingleStacktestWebServerVpcApublicSubnet20CD95BAD1EA1735F"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowHttpIngressTrafficToWebServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowHttpIngressTrafficToWebServerB8DFF3C1"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowHttpsIngressTrafficToWebServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowHttpsIngressTrafficToWebServerE8088C6E"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowEphemeralEgressResponseTrafficFromWebServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowEphemeralEgressResponseTrafficFromWebServer864AE11F"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowSSHFromAdminServerVpcToThePublicSubnetsOfWebServerVpcA/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowSSHFromAdminServerVpcToThePublicSubnetsOfWebServerVpcA75B9113F"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowEphemeralTrafficFromWebServerToEphemeralPortOfAdminServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowEphemeralTrafficFromWebServerToEphemeralPortOfAdminServerF24722E8"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowHttpEgressTrafficFromWebServerForDownloads/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowHttpEgressTrafficFromWebServerForDownloads29419F2A"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowHttpsEgressTrafficFromWebServerForDownloads/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowHttpsEgressTrafficFromWebServerForDownloads8B65ED03"
+          }
+        ],
+        "/singleStack-test/WebSeverNetworkAcl/AllowEphemeralIngressResponseTrafficFromInternet/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSeverNetworkAclAllowEphemeralIngressResponseTrafficFromInternet9CD0DD3E"
+          }
+        ],
+        "/singleStack-test/webserverSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webserverSGE614F020"
+          }
+        ],
+        "/singleStack-test/adminServerNetworkAcl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerNetworkAcl86052E54"
+          }
+        ],
+        "/singleStack-test/adminServerNetworkAcl/DefaultAssociationsingleStacktestAdminServerVpcBpublicSubnet108F794FC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerNetworkAclDefaultAssociationsingleStacktestAdminServerVpcBpublicSubnet108F794FC9BACCA98"
+          }
+        ],
+        "/singleStack-test/adminServerNetworkAcl/DefaultAssociationsingleStacktestAdminServerVpcBpublicSubnet25978D576/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerNetworkAclDefaultAssociationsingleStacktestAdminServerVpcBpublicSubnet25978D576BA881692"
+          }
+        ],
+        "/singleStack-test/adminServerNetworkAcl/AllowRdpIngressTrafficToAdminServerFromAdministratorOffice/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerNetworkAclAllowRdpIngressTrafficToAdminServerFromAdministratorOffice1BDC0E0D"
+          }
+        ],
+        "/singleStack-test/adminServerNetworkAcl/AllowRdpEgressTrafficFromAdminServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerNetworkAclAllowRdpEgressTrafficFromAdminServerC9DE3497"
+          }
+        ],
+        "/singleStack-test/adminServerNetworkAcl/AllowSshEgressTrafficFromAdminServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerNetworkAclAllowSshEgressTrafficFromAdminServerFB5C4B12"
+          }
+        ],
+        "/singleStack-test/adminServerNetworkAcl/AllowSSHIngressTrafficFromWebServerAsResponse/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerNetworkAclAllowSSHIngressTrafficFromWebServerAsResponse1632C37E"
+          }
+        ],
+        "/singleStack-test/adminServerSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerSG1C04FFE8"
+          }
+        ],
+        "/singleStack-test/WebServerKeyPair": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerKeyPair"
+          }
+        ],
+        "/singleStack-test/webServerEBSVolKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webServerEBSVolKeyEA9F0569"
+          }
+        ],
+        "/singleStack-test/webServerEBSVolKey/Alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webServerEBSVolKeyAlias469F9370"
+          }
+        ],
+        "/singleStack-test/WebServer/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerInstanceRoleEEE3F4CD"
+          }
+        ],
+        "/singleStack-test/WebServer/InstanceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerInstanceRoleDefaultPolicy30CD8714"
+          }
+        ],
+        "/singleStack-test/WebServer/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServerInstanceProfile7A5DA8F6"
+          }
+        ],
+        "/singleStack-test/WebServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebServer99EDD300"
+          }
+        ],
+        "/singleStack-test/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/singleStack-test/AdminServerKeyPair": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerKeyPair"
+          }
+        ],
+        "/singleStack-test/adminServerEBSVolKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerEBSVolKeyA06EAFCA"
+          }
+        ],
+        "/singleStack-test/adminServerEBSVolKey/Alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminServerEBSVolKeyAlias0AC94F04"
+          }
+        ],
+        "/singleStack-test/AdminServer/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerInstanceRole2DCE370B"
+          }
+        ],
+        "/singleStack-test/AdminServer/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServerInstanceProfile39C00340"
+          }
+        ],
+        "/singleStack-test/AdminServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminServer61AB9504"
+          }
+        ],
+        "/singleStack-test/SsmParameterValue:--aws--service--ami-windows-latest--Windows_Server-2022-English-Full-Base:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiwindowslatestWindowsServer2022EnglishFullBaseC96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/singleStack-test/VpcAtoVpcB": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcAtoVpcB"
+          }
+        ],
+        "/singleStack-test/RouteFromPublicSubnetOfWebServerVpcAToPublicSubnetOfAdminServerVpcB": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteFromPublicSubnetOfWebServerVpcAToPublicSubnetOfAdminServerVpcB"
+          }
+        ],
+        "/singleStack-test/RouteFromPublicSubnetOfAdminServerVpcBToPublicSubnetOfWebServerVpcA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteFromPublicSubnetOfAdminServerVpcBToPublicSubnetOfWebServerVpcA"
+          }
+        ],
+        "/singleStack-test/ServerVaultKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServerVaultKeyA1671AC3"
+          }
+        ],
+        "/singleStack-test/ServerVaultKey/Alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServerVaultKeyAlias400F5F87"
+          }
+        ],
+        "/singleStack-test/ServerBackUpVault/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServerBackUpVault535F5727"
+          }
+        ],
+        "/singleStack-test/BackUpPlanServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BackUpPlanServerB3045F24"
+          }
+        ],
+        "/singleStack-test/BackUpPlanServer/Servers-Selection/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BackUpPlanServerServersSelectionRole1FBEC233"
+          }
+        ],
+        "/singleStack-test/BackUpPlanServer/Servers-Selection/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BackUpPlanServerServersSelectionBCB3C339"
+          }
+        ],
+        "/singleStack-test/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/singleStack-test/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/singleStack-test/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/singleStack-test/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "singleStack-test"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
